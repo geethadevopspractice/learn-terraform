@@ -67,3 +67,5 @@ output "list1_value1" {
 output "map1_name" {
   value = var.map1["name"]
 }
+
+variable "x2" {}
