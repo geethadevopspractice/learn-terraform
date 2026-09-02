@@ -69,3 +69,7 @@ output "map1_name" {
 }
 
 variable "x2" {}
+
+output "x2" {
+  value = var.x2
+}
