@@ -74,8 +74,8 @@ output "x2" {
   value = var.x2
 }
 
-variable "x3" {}
+variable "x3_env" {}
 
-output "x3" {
+output "x3_env" {
   value = var.x3
 }
