@@ -79,3 +79,9 @@ variable "x3_env" {}
 output "x3_env" {
   value = var.x3_env
 }
+
+variable "x4" {}
+
+output "x4" {
+  value = var.x4
+}
