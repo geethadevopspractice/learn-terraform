@@ -77,5 +77,5 @@ output "x2" {
 variable "x3_env" {}
 
 output "x3_env" {
-  value = var.x3
+  value = var.x3_env
 }
