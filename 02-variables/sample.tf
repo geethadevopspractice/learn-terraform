@@ -73,3 +73,9 @@ variable "x2" {}
 output "x2" {
   value = var.x2
 }
+
+variable "x3" {}
+
+output "x3" {
+  value = var.x3
+}
