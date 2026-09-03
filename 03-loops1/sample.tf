@@ -12,10 +12,17 @@ provider "aws" {
 variable "instance" {
     default = ["frontend", "catalogue"]
 }
+variable "ami" {
+    default = "ami-0220d79f3f480ecf5"
+    }
+variable "instance_type" {
+    default = "t3.micro"
+    }
 resource "aws_instance" "web" {
-    count = var.instance.length //length(var.instance)
-  ami           = "ami-0220d79f3f480ecf5"
-  instance_type = "t3.micro"
+    count = length(var.instance)
+#     var.instance.length
+  ami           = var.ami
+  instance_type = var.instance_type
 
   tags = {
     Name = var.instance[count.index]
