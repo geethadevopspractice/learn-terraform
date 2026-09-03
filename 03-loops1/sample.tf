@@ -13,7 +13,8 @@ variable "instance" {
     default = ["frontend", "catalogue"]
 }
 resource "aws_instance" "web" {
-    count = var.instance.length //length(var.instance)
+    count = length(var.instance)
+#     var.instance.length
   ami           = "ami-0220d79f3f480ecf5"
   instance_type = "t3.micro"
 
