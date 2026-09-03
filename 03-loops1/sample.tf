@@ -9,13 +9,15 @@ output "numbers" {
 provider "aws" {
   region = "us-east-1"
 }
-
+variable "instance" {
+    default = ["frontend", "catalogue"]
+}
 resource "aws_instance" "web" {
-    count = 2
+    count = var.instance.length //length(var.instance)
   ami           = "ami-0220d79f3f480ecf5"
   instance_type = "t3.micro"
 
   tags = {
-    Name = "web-${count.index}
+    Name = var.instances[count.index]
   }
 }
