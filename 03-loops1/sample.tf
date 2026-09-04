@@ -10,7 +10,7 @@ provider "aws" {
   region = "us-east-1"
 }
 variable "instance" {
-    default = ["frontend", "catalogue"]
+    default = ["catalogue", "frontend"]
 }
 variable "ami" {
     default = "ami-0220d79f3f480ecf5"
