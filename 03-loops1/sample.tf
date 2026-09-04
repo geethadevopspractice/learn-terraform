@@ -5,7 +5,9 @@ resource "null_resource" "dummy" {
 output "numbers" {
   value = [for i in range(1, 11) : i]
 }
+# -------------------------------------------------------------------
 
+# here we are creating a resources by using the list not the map
 provider "aws" {
   region = "us-east-1"
 }
