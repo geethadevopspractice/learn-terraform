@@ -12,7 +12,7 @@ variable "instance" {
         }
 }
 variable "ami" {
-    default = "ami-0220d79f3f480ecf5"
+    default = "ami-0055977a6e828a4f4"
     }
 resource "aws_instance" "web" {
     for_each = var.instance
