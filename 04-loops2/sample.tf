@@ -1,6 +1,7 @@
 provider "aws" {
   region = "us-east-1"
 }
+#here we are using the maps
 variable "instance" {
     default = {
       frontend = {
