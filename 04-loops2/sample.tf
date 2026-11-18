@@ -3,12 +3,12 @@ provider "aws" {
 }
 variable "instance" {
     default = {
+      frontend = {
+        instance_type = "t3.micro"
+      }
         catalogue = {
                     instance_type = "t3.small"
                     }
-        frontend = {
-            instance_type = "t3.micro"
-            }
         }
 }
 variable "ami" {
